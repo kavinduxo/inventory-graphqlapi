@@ -7,17 +7,6 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model User {
-  createdAt DateTime @default(now())
-  firstName String?
-  id        String   @id @default(auto()) @map("_id") @mongo.ObjectId
-  lastName  String?
-  password  String
-  roles     Json
-  updatedAt DateTime @updatedAt
-  username  String   @unique
-}
-
 model Part {
   color       String?
   createdAt   DateTime @default(now())
